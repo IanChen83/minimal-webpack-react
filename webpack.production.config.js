@@ -8,7 +8,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const moduleRules = require('./webpack.modules.config.js')
 
 const SRC_DIR = path.resolve(__dirname, 'app')
-const BUILD_DIR = path.resolve(__dirname, 'build')
+const DIST_DIR = path.resolve(__dirname, 'dist')
 
 const config = {
   stats: 'errors-only',
@@ -26,7 +26,7 @@ const config = {
   output: {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].js',
-    path: BUILD_DIR,
+    path: DIST_DIR,
     publicPath: '',
   },
 

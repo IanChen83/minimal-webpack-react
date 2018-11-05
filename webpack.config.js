@@ -6,6 +6,7 @@ const moduleRules = require('./webpack.modules.config.js')
 
 const SRC_DIR = path.resolve(__dirname, 'app')
 const BUILD_DIR = path.resolve(__dirname, 'build')
+const DIST_DIR = path.resolve(__dirname, 'dist')
 
 const config = {
   stats: {
@@ -26,7 +27,7 @@ const config = {
 
   output: {
     filename: 'bundle.js',
-    path: BUILD_DIR,
+    path: DIST_DIR,
     publicPath: '',
   },
 
