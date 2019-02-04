@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const DashboardPlugin = require('webpack-dashboard/plugin')
 
 const moduleRules = require('./webpack.modules.config.js')
 
@@ -47,6 +48,7 @@ const config = {
   module: moduleRules,
 
   plugins: [
+    new DashboardPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new CopyWebpackPlugin([{ from: 'vendors', to: 'vendors' }]),
