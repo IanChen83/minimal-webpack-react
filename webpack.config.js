@@ -38,9 +38,6 @@ const config = {
     contentBase: BUILD_DIR,
     historyApiFallback: true,
     publicPath: '/',
-    stats: {
-      modules: false,
-    },
   },
 
   resolve: {
